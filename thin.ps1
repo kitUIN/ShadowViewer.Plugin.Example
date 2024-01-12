@@ -57,6 +57,7 @@ $author = $xmldata.Project.PropertyGroup.Authors
 $webUri = $xmldata.Project.PropertyGroup.RepositoryUrl
 $lang = $xmldata.Project.PropertyGroup.PluginLang.Split(";") -join ","
 $require = @()
+$coreVersion = "0.0.0.0"
 foreach ($itemGroup in $xmldata.Project.ItemGroup)
 {
   foreach ($item in $itemGroup.ChildNodes)
@@ -66,12 +67,16 @@ foreach ($itemGroup in $xmldata.Project.ItemGroup)
         if($item.GetAttribute("Include").StartsWith("ShadowViewer.Plugin."))
         {
             $key = $item.GetAttribute("Include").Replace("ShadowViewer.Plugin.","")
-            $require+= $key+"="+$item.GetAttribute("Version")
+            $require+= $key+">="+$item.GetAttribute("Version")
+        }
+        if($item.GetAttribute("Include") -eq "ShadowViewer.Core" )
+        {
+            $coreVersion+= $item.GetAttribute("Version")
         }
     }
   }
 }
-$j=@{Id=$id;Name=$name;Description=$description;Logo=$logo;Version=$version;Author=$author;WebUri=$webUri;Lang=$lang;Require=$require}
+$j=@{Id=$id;Name=$name;Description=$description;Logo=$logo;Version=$version;Author=$author;WebUri=$webUri;Lang=$lang;Require=$require;MinVersion=$coreVersion}
 $j | ConvertTo-Json | Out-File $outjson
 if(Test-Path -Path $csproj)
 {
