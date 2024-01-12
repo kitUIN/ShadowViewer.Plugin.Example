@@ -55,7 +55,7 @@ $logo = $xmldata.Project.PropertyGroup.PluginLogo
 $version = $xmldata.Project.PropertyGroup.Version
 $author = $xmldata.Project.PropertyGroup.Authors
 $webUri = $xmldata.Project.PropertyGroup.RepositoryUrl
-$lang = $xmldata.Project.PropertyGroup.PluginLang.Split(";") -join ","
+$lang = $xmldata.Project.PropertyGroup.PluginLang.Split(";")
 $require = @()
 $coreVersion = "0.0.0.0"
 foreach ($itemGroup in $xmldata.Project.ItemGroup)
