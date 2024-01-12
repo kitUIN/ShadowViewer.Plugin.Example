@@ -71,7 +71,7 @@ foreach ($itemGroup in $xmldata.Project.ItemGroup)
         }
         if($item.GetAttribute("Include") -eq "ShadowViewer.Core" )
         {
-            $coreVersion+= $item.GetAttribute("Version")
+            $coreVersion = $item.GetAttribute("Version")
         }
     }
   }
