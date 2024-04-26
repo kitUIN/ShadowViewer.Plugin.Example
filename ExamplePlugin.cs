@@ -1,22 +1,21 @@
 using Serilog;
-using Serilog.Core;
-using ShadowViewer.Interfaces;
 using ShadowViewer.Models;
 using ShadowViewer.Plugins;
 using ShadowViewer.Services;
-using ShadowViewer.Services.Interfaces;
 using SqlSugar;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShadowViewer.Plugin.Example
 {
+    /// <summary>
+    /// 插件主类
+    /// </summary>
     [AutoPluginMeta]
     public partial class ExamplePlugin : PluginBase
     {
+        /// <summary>
+        /// 自动依赖注入
+        /// </summary>
         public ExamplePlugin(ICallableService callableService, ISqlSugarClient sqlSugarClient, CompressService compressServices, IPluginService pluginService, ILogger logger) : base(callableService, sqlSugarClient, compressServices, pluginService, logger)
         {
         }
@@ -34,17 +33,17 @@ namespace ShadowViewer.Plugin.Example
         /// <summary>
         /// <inheritdoc/>
         /// </summary>
-        public override bool CanSwitch => false;
+        public override bool CanSwitch => true;
 
         /// <summary>
         /// <inheritdoc/>
         /// </summary>
-        public override bool CanDelete => false;
+        public override bool CanDelete => true;
 
         /// <summary>
         /// <inheritdoc/>
         /// </summary>
-        public override bool CanOpenFolder => false;
+        public override bool CanOpenFolder => true;
 
         /// <summary>
         /// <inheritdoc/>
