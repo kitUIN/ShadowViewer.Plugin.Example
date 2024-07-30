@@ -12,7 +12,7 @@ namespace ShadowViewer.Plugin.Example
     /// 插件主类
     /// </summary>
     [AutoPluginMeta]
-    public partial class ExamplePlugin : PluginBase
+    public partial class ExamplePlugin : AShadowViewerPlugin
     {
         /// <summary>
         /// 自动依赖注入
