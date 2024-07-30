@@ -4,6 +4,7 @@ using ShadowViewer.Plugins;
 using ShadowViewer.Services;
 using SqlSugar;
 using System;
+using ShadowPluginLoader.MetaAttributes;
 
 namespace ShadowViewer.Plugin.Example
 {
@@ -16,9 +17,18 @@ namespace ShadowViewer.Plugin.Example
         /// <summary>
         /// 自动依赖注入
         /// </summary>
-        public ExamplePlugin(ICallableService callableService, ISqlSugarClient sqlSugarClient, CompressService compressServices, IPluginService pluginService, ILogger logger) : base(callableService, sqlSugarClient, compressServices, pluginService, logger)
+        public ExamplePlugin(ICallableService callableService, 
+            ISqlSugarClient sqlSugarClient, 
+            CompressService compressServices, 
+            PluginLoader pluginService, 
+            ILogger logger) : base(
+            callableService, sqlSugarClient, 
+            compressServices, pluginService, logger)
         {
         }
+
+        /// <inheritdoc />
+        public override PluginMetaData MetaData => Meta;
 
         /// <summary>
         /// <inheritdoc/>
@@ -45,27 +55,7 @@ namespace ShadowViewer.Plugin.Example
         /// </summary>
         public override bool CanOpenFolder => true;
 
-        /// <summary>
-        /// <inheritdoc/>
-        /// </summary>
-        protected override void PluginEnabled()
-        {
-            Logger.Information("[{ID}]触发PluginEnabled", MetaData.Id);
-        }
-
-        /// <summary>
-        /// <inheritdoc/>
-        /// </summary>
-        protected override void PluginDisabled()
-        {
-            Logger.Information("[{ID}]触发PluginDisabled", MetaData.Id);
-        }
-        /// <summary>
-        /// <inheritdoc/>
-        /// </summary>
-        public override void PluginDeleting()
-        {
-            Logger.Information("[{ID}]触发PluginDeleting", MetaData.Id);
-        }
+        /// <inheritdoc />
+        public override string DisplayName => "示例插件";
     }
 }

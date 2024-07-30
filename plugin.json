@@ -1,0 +1,11 @@
+{
+  "DllName": "ShadowViewer.Plugin.Example",
+  "Description": "ShadowViewer\u793A\u4F8B\u63D2\u4EF6",
+  "Authors": "kitUIN",
+  "WebUri": "https://github.com/kitUIN/ShadowViewer.Plugin.Example",
+  "Logo": "fluent://regular/\\uE433",
+  "Id": "Example",
+  "Name": "\u793A\u4F8B\u63D2\u4EF6",
+  "Version": "0.1.1.0",
+  "Dependencies": []
+}
