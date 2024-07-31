@@ -17,13 +17,8 @@ namespace ShadowViewer.Plugin.Example
         /// <summary>
         /// ×Ô¶¯ÒÀÀµ×¢Èë
         /// </summary>
-        public ExamplePlugin(ICallableService callableService, 
-            ISqlSugarClient sqlSugarClient, 
-            CompressService compressServices, 
-            PluginLoader pluginService, 
-            ILogger logger) : base(
-            callableService, sqlSugarClient, 
-            compressServices, pluginService, logger)
+        public ExamplePlugin(ICallableService caller, ISqlSugarClient db, CompressService compressService, ILogger logger, PluginLoader pluginService, INotifyService notifyService) :
+            base(caller, db, compressService, logger, pluginService, notifyService)
         {
         }
 
