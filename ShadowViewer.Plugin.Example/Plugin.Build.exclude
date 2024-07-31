@@ -69,3 +69,14 @@ runtimes/*libe_sqlite3.*
 runtimes/*e_sqlite3.*
 runtimes/*Microsoft.Data.SqlClient.SNI.dll
 runtimes/*Microsoft.WindowsAppRuntime.Bootstrap.dll
+ShadowViewer.Controls.Notification.dll
+ShadowViewer.Controls.PluginLogo.dll
+ShadowViewer.Controls.ShadowSettingHeader.dll
+ShadowViewer.Controls.TitleBorder.dll
+Oscar.Data.SqlClient.dll
+ShadowViewer.Analyzer.dll
+DM.DmProvider.dll
+Microsoft.Windows.Widgets.Providers.Projection.dll
+Microsoft.Xaml.Interactivity.dll
+CommunityToolkit.WinUI.Behaviors.dll
+Microsoft.Xaml.Interactions.dll

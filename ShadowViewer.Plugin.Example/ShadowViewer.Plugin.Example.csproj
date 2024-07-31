@@ -11,7 +11,7 @@
 	  <!--ShadowViewer.Plugin.{插件id}(nuget包ID)-->
 	  <PackageId>ShadowViewer.Plugin.Example</PackageId>
 	  <!--插件版本号(nuget包版本号)-->
-	  <Version>0.1.1.1</Version>
+	  <Version>0.1.2.1</Version>
 
 	  <!--nuget数据 -->
 	  <Description>ShadowViewer示例插件</Description>
@@ -40,7 +40,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <PackageReference Include="ShadowViewer.Core" Version="2024.7.31.1" />
+	  <PackageReference Include="ShadowViewer.Core" Version="2024.7.31.12" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />

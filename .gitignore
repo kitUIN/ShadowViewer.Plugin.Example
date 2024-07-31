@@ -5,3 +5,7 @@ Packages/
 NugetPackages/
 /Assets/FluentSystemIcons-Filled.ttf
 /Assets/FluentSystemIcons-Regular.ttf
+/ShadowViewer.Plugin.Example/plugin.d.json
+/ShadowViewer.Plugin.Example/plugin.json
+/ShadowViewer.Plugin.Example/Assets/FluentSystemIcons-Filled.ttf
+/ShadowViewer.Plugin.Example/Assets/FluentSystemIcons-Regular.ttf
