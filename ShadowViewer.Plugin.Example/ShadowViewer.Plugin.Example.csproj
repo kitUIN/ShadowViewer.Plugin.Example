@@ -39,7 +39,7 @@
 	  </PluginMeta>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ShadowViewer.Core\ShadowViewer.Core\ShadowViewer.Core.csproj" />
+    <ProjectReference Include="..\..\ShadowViewer.Core\ShadowViewer.Core\ShadowViewer.Sdk.csproj" />
   </ItemGroup>
 
 </Project>
